@@ -1,0 +1,19 @@
+@import "../../Assets/Styles/colors.scss";
+.root {
+  // max-width: 50% !important;
+  background: gray;
+  padding: 2rem;
+  border-radius: 3px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .containerForm {
+    // max-width: 50%;
+    .containerButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { Layout } from "antd";
 
 //? Pages
-
+import { Inicio } from "../Inicio/Inicio";
 //? Components
 
 import { HeaderComponent } from "../../Shared/Components/Header/Header"
@@ -16,15 +16,14 @@ const { Content } = Layout;
 function App() {
   return (
       <Layout style={{ minHeight: "100%" }}>
-
-      <HeaderComponent />
-      <Content>
-
-      <Router>
-            <Error404 default />
-          </Router>
-      </Content>
-      <FooterComponent/>
+        <HeaderComponent />
+          <Content style={{display:'flex', justifyContent: 'center'}}>
+            <Router>
+              <Inicio  path="/"/>
+              <Error404 default />
+            </Router>
+          </Content>
+        <FooterComponent/>
       </Layout>
   );
 }
