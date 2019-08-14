@@ -1,0 +1,8 @@
+@import "../../../Assets/Styles/colors.scss";
+.root {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: $main !important;
+}
