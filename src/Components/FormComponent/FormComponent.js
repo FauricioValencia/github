@@ -2,15 +2,14 @@ import React from 'react'
 import { Form, Icon, Input, Button, DatePicker } from 'antd';
 import 'antd/dist/antd.css';
 import classes from "./FormComponent.module.scss";
-const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
 
-function FormComponent({form}, props) {
-  console.log('props: ', props);
+function FormComponent({form, onHandleSaveDataUser}) {
     const   handleSubmit = e => {
         e.preventDefault();
         form.validateFields((err, values) => {
           if (!err) {
             console.log('Received values of form: ', values);
+            onHandleSaveDataUser(values)
           }
         });
       };
@@ -57,7 +56,7 @@ function FormComponent({form}, props) {
         {getFieldDecorator('date', {
             rules: [{ required: true, message: 'Porfavor ingresa la fecha de nacimiento' }],
           })(
-            <DatePicker onChange={onChange} />
+            <DatePicker onChange={onChange} className={classes.date} />
 
           )}
         </Form.Item>

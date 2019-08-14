@@ -10,6 +10,9 @@
   align-items: center;
   .containerForm {
     // max-width: 50%;
+    .date {
+      width: 100%;
+    }
     .containerButton {
       display: flex;
       justify-content: center;
