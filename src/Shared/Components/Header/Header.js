@@ -7,6 +7,11 @@ import Logo from '../Logo/Logo';
 
 const { Header } = Layout;
 
+/**
+ * Headbar for aplication
+ * @return {Component}   headBar with information of user and svg of github
+ */
+
 export function HeaderComponent() {
   const cookies = useCookies(['values']);
 

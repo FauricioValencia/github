@@ -4,6 +4,13 @@ import { Form, Icon, Input, Button, DatePicker } from 'antd';
 import 'antd/dist/antd.css';
 import classes from './FormComponent.module.scss';
 
+/**
+ * Component form of data candidate
+ * @param  {Json} form Let take props of Form.create
+ * @param  {Funcntion} onHandleSaveDataUser Let save data in cookis
+ * @return {Component}      Form for save data of user in cookis
+ */
+
 function FormComponent({ form, onHandleSaveDataUser }) {
   const handleSubmit = e => {
     e.preventDefault();

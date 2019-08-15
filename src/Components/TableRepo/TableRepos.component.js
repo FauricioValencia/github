@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 import { Table } from 'antd';
 
+/**
+ * Table of respositories, where you would organize alphabetically
+ * @param  {Array} repos array of repositories
+ * @return {Component}      Table of repositories
+ */
+
 export function TableRepos({ repos = [] }) {
   const columns = [
     {
