@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from "antd";
 
 //* Styles
-import classes from './Footer.styles.module.scss'
+import classes from './Footer.module.scss'
 
 const { Footer } = Layout;
 export function FooterComponent() {
