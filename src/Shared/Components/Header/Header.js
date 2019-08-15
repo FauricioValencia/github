@@ -23,8 +23,8 @@ export function HeaderComponent() {
               ${cookies[0].values.lastnames},
               ${cookies[0].values.userGithub}
                 `
-              : 'Prueba de selección desarrollador front-end'
-            : 'Prueba de selección desarrollador front-end'}
+              : 'Prueba de selección'
+            : 'Prueba de selección'}
         </span>
       </h2>
     </Header>

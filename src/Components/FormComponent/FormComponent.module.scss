@@ -1,13 +1,14 @@
 @import '../../Assets/Styles/colors.scss';
+@import '../../Assets/Styles/mixins.scss';
 .root {
-  width: 30vw;
+  @include respond-to(800px) {
+    width: 30vw;
+  }
   background: $BackgroundForm;
   padding: 2rem;
   border-radius: 3px;
   margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centerContent;
   .containerForm {
     .date {
       width: 100%;
@@ -16,9 +17,7 @@
       color: $iconInputs;
     }
     .containerButton {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include centerContent;
       .button {
         background-color: $Button;
       }
