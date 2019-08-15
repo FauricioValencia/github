@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Redirect } from '@reach/router';
 import { useCookies } from 'react-cookie';
 
@@ -7,9 +7,6 @@ import { WrappedFormComponent } from '../../Components/FormComponent/FormCompone
 
 export function Inicio() {
   const [cookies, setCookie] = useCookies(['values']);
-  useEffect(() => {
-    console.log('cookies inicio: ', Boolean(cookies.values));
-  }, [cookies]);
   return (
     <Fragment>
       {Boolean(cookies.values) && <Redirect noThrow to="/home" />}

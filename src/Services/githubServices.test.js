@@ -1,5 +1,4 @@
 import GithubService from './github.services';
-import { doesNotReject } from 'assert';
 const githubService = new GithubService();
 
 describe('Traer todos los repositorios', () => {

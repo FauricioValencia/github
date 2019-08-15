@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Input } from 'antd';
 import classes from './SearchBar.module.scss';
 const { Search } = Input;
@@ -12,3 +13,6 @@ export function SearchBar({ setValue }) {
     </div>
   );
 }
+SearchBar.propTypes = {
+  setValue: PropTypes.func
+};

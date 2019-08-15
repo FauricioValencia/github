@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Form, Icon, Input, Button, DatePicker } from 'antd';
 import 'antd/dist/antd.css';
 import classes from './FormComponent.module.scss';
@@ -97,3 +98,7 @@ function FormComponent({ form, onHandleSaveDataUser }) {
 export const WrappedFormComponent = Form.create({ name: 'Form_Component' })(
   FormComponent
 );
+
+FormComponent.propTypes = {
+  onHandleSaveDataUser: PropTypes.func
+};

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Table } from 'antd';
 
 export function TableRepos({ repos = [] }) {
@@ -48,3 +50,6 @@ export function TableRepos({ repos = [] }) {
     />
   );
 }
+TableRepos.propTypes = {
+  repos: PropTypes.array
+};
