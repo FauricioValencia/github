@@ -24,33 +24,23 @@ function FormComponent({ form, onHandleSaveDataUser }) {
         <Form.Item>
           {getFieldDecorator('names', {
             rules: [{ required: true, message: 'Porfavor ingresa los nombres' }]
-          })(
-            <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              placeholder="Nombres"
-            />
-          )}
+          })(<Input prefix={<Icon type="user" />} placeholder="Nombres" />)}
         </Form.Item>
         <Form.Item>
           {getFieldDecorator('lastnames', {
             rules: [
               { required: true, message: 'Porfavor ingresa los apellidos' }
             ]
-          })(
-            <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              placeholder="Apellidos"
-            />
-          )}
+          })(<Input prefix={<Icon type="user" />} placeholder="Apellidos" />)}
         </Form.Item>
         <Form.Item>
           {getFieldDecorator('identification', {
             rules: [{ required: true, message: 'Porfavor ingresa la cédula' }]
           })(
             <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              prefix={<Icon type="idcard" />}
               placeholder="Cedula"
-              type=""
+              type="number"
             />
           )}
         </Form.Item>
@@ -74,8 +64,9 @@ function FormComponent({ form, onHandleSaveDataUser }) {
             ]
           })(
             <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              prefix={<Icon type="mail" />}
               placeholder="Correo electronico"
+              type="email"
             />
           )}
         </Form.Item>
@@ -89,17 +80,13 @@ function FormComponent({ form, onHandleSaveDataUser }) {
             ]
           })(
             <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              prefix={<Icon type="github" />}
               placeholder="Usuario github candidato"
             />
           )}
         </Form.Item>
         <Form.Item className={classes.containerButton}>
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="login-form-button"
-          >
+          <Button type="primary" htmlType="submit" className={classes.button}>
             Guardar
           </Button>
         </Form.Item>

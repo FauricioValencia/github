@@ -1,4 +1,5 @@
 import React, { useEffect, useContext, useState, Fragment } from 'react';
+import { Redirect } from '@reach/router';
 import { useCookies } from 'react-cookie';
 
 // ? Context
@@ -10,7 +11,7 @@ import { SearchBar } from '../../Components/SearchBar/SearchBar';
 
 export function Home() {
   const cookies = useCookies(['values']);
-  const [repos, setRepos] = useState([]);
+  const [allRepos, setAllRepos] = useState([]);
   const [reposFilter, setReposFilter] = useState([]);
   const gitHubServices = useContext(GithubContext);
 
@@ -23,22 +24,25 @@ export function Home() {
       let respositories = await gitHubServices.getReposUser(
         cookies[0].values.userGithub
       );
-      setRepos(respositories);
+      setAllRepos(respositories);
+      setReposFilter(respositories);
     }
   };
 
   const filterRepos = value => {
-    const newRepos = [...repos];
+    const newRepos = [...allRepos];
     if (value.length > 3) {
       let newFilter = newRepos.filter(repo => repo.name.includes(value));
       setReposFilter(newFilter);
+    } else if (value.length === 0) {
+      setReposFilter(allRepos);
     }
   };
-
   return (
     <Fragment>
+      {!Boolean(cookies[0].values) && <Redirect noThrow to="/" />}
       <SearchBar setValue={value => filterRepos(value)} />
-      <TableRepos repos={reposFilter.length >= 1 ? reposFilter : repos} />
+      <TableRepos repos={reposFilter} />
     </Fragment>
   );
 }

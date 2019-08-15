@@ -13,24 +13,24 @@ export function TableRepos({ repos = [] }) {
       title: 'Branch',
       dataIndex: 'default_branch',
       defaultSortOrder: 'descend',
-      sorter: (a, b) => a.default_branch - b.default_branch
+      sorter: (a, b) => (a.default_branch < b.default_branch ? 1 : -1)
     },
     {
       title: 'Url',
       dataIndex: 'url',
-      sorter: (a, b) => a.url.length - b.url.length,
+      sorter: (a, b) => (a.url < b.url ? 1 : -1),
       sortDirections: ['descend', 'ascend']
     },
     {
       title: 'Nombre',
       dataIndex: 'name',
-      sorter: (a, b) => a.name - b.name,
+      sorter: (a, b) => (a.name < b.name ? 1 : -1),
       sortDirections: ['descend', 'ascend']
     },
     {
       title: 'Descripción',
       dataIndex: 'description',
-      sorter: (a, b) => a.descripcion - b.descripcion,
+      sorter: (a, b) => (a.description < b.description ? 1 : -1),
       sortDirections: ['descend', 'ascend']
     }
   ];

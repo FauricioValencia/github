@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
-import { useCookies } from 'react-cookie';
 import { Redirect } from '@reach/router';
+import { useCookies } from 'react-cookie';
 
 // ? Components
 import { WrappedFormComponent } from '../../Components/FormComponent/FormComponent';
@@ -8,7 +8,7 @@ import { WrappedFormComponent } from '../../Components/FormComponent/FormCompone
 export function Inicio() {
   const [cookies, setCookie] = useCookies(['values']);
   useEffect(() => {
-    console.log('cookies: ', Boolean(cookies.values));
+    console.log('cookies inicio: ', Boolean(cookies.values));
   }, [cookies]);
   return (
     <Fragment>

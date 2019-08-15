@@ -1,5 +1,4 @@
 import React from 'react';
-import { useCookies } from 'react-cookie';
 import { Router } from '@reach/router';
 import { CookiesProvider } from 'react-cookie';
 
@@ -24,8 +23,6 @@ import { GithubContext } from '../../Constants/Context/context.contants';
 const { Content } = Layout;
 const gitService = new GithubService();
 function App() {
-  const cookies = useCookies(['values']);
-  console.log('desde la app: ', cookies[0].values);
   return (
     <CookiesProvider>
       <GithubContext.Provider value={gitService}>

@@ -1,15 +1,21 @@
-@import "../../../Assets/Styles/colors.scss";
+@import '../../../Assets/Styles/colors.scss';
 .root {
   padding: 0 !important;
   background: $main !important;
 
   .containerLogo {
-    height: 40px;
+    transform: scale(0.13);
+    height: 5px;
+    width: 10px;
     position: absolute;
     left: 10px;
-    top:10px;
+    top: 5px;
   }
   span {
-    color: white
+    color: $textHeader;
+    margin-left: 2rem;
+  }
+  h2 {
+    text-align: center;
   }
 }
