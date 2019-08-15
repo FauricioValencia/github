@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.ant-spin-nested-loading {
+  position: relative !important;
+  max-width: 80vw !important;
+  width: 80vw !important;
+  height: 60vh !important;
+  overflow-y: scroll !important;
+}
